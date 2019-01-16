@@ -55,6 +55,10 @@
 \usepackage{longtable,multirow,booktabs}
 \usepackage[nodayofweek]{datetime}
 
+\usepackage{chngcntr}
+\counterwithout{figure}{section}
+\counterwithout{figure}{subsection}
+
 %%----------------------------------------
 %% Information about the work
 %%----------------------------------------
@@ -69,10 +73,10 @@
 %%----------------------------------------
 %% Dates (appear in title pages)
 %%----------------------------------------
-%\thesisdate{DAY de MONTH de YEAR}
+\thesisdate{DAY de MONTH de YEAR}
 %\formatdate{27}{9}{2004}
 
-\thesisdate{\today}
+%\thesisdate{\today}
 \thesisyear{2019}
 
 %%----------------------------------------
@@ -195,7 +199,9 @@
 %% Comment the next command if BibTeX file not used, 
 %% Assumes that bibliography is in 'myrefs.bib'
 %% plainnat-pt.bst is used by default
-\PrintBib{Bibliography/myrefs}
+\bibliographystyle{ieeetr}
+\bibliography{Bibliography/myrefs}
+%\PrintBib{Bibliography/myrefs}
 
 %% Index
 %% Uncomment next command if index is required, 
