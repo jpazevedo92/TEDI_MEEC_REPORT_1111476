@@ -7,13 +7,12 @@
 %To delete page numbering in white pages
 %https://tex.stackexchange.com/questions/160076/manually-control-header-and-page-numbering
 \let\origdoublepage\cleardoublepage
-\newcommand{\clearemptydoublepage}{
+\newcommand{\clearemptydoublepage}{%
   \clearpage{\pagestyle{empty}\origdoublepage}}
 \let\cleardoublepage\clearemptydoublepage
 
 %%%Acronyms
 \newcommand{\acroemph}[1]{\textit{#1}}
-
 \setlength{\unitlength}{1mm}
 \renewcommand{\baselinestretch}{1.5}
 \newcommand*{\addacronym}[2]{

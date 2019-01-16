@@ -53,11 +53,6 @@
 \usepackage{datatool}
 \usepackage{acronym}
 \usepackage{longtable,multirow,booktabs}
-\usepackage[nodayofweek]{datetime}
-
-\usepackage{chngcntr}
-\counterwithout{figure}{section}
-\counterwithout{figure}{subsection}
 
 %%----------------------------------------
 %% Information about the work
@@ -74,23 +69,20 @@
 %% Dates (appear in title pages)
 %%----------------------------------------
 \thesisdate{DAY de MONTH de YEAR}
-%\formatdate{27}{9}{2004}
-
-%\thesisdate{\today}
 \thesisyear{2019}
 
 %%----------------------------------------
 %% Copyright text
 %%----------------------------------------
-\copyrightnotice{João Azevedo, 2019} % Comment if not used
+\copyrightnotice{João Azevedo, 2019} % Comment if not used % Comment if not used
 
 %%----------------------------------------
 %% Keywords (appear in abstract)
 %%----------------------------------------
 % English Keywords
-\keywords{Uav, Drones, Networks, Control, Extend, Mesh, Multi-Hop, Routing.}
+\keywords{Uav, Drones, Networks, Control, Extend, Mesh, Multi-Hop, Routing}
 % Portuguese Keywords
-\keywordsPT{UAV, Drones, Redes, Controlo, Alcance, Mesh, Multi-hop, Encaminhamento.} 
+\keywordsPT{UAV, Drones, Redes, Controlo, Alcance, Mesh, Multi-hop, Encaminhamento} 
 
 %%----------------------------------------
 %% Macros
@@ -128,7 +120,7 @@
 
 %\company{Empresa}{Nome da Empresa}
 
-%\companysupervisor{Supervisão}{Nome do Supervisor Empresa, %%%\href{mailto:YYY@empresa.com}{YYY@empresa.com}}
+%\companysupervisor{Supervisão}{Nome do Supervisor Empresa, \href{mailto:YYY@empresa.com}{YYY@empresa.com}}
 
 %%----------------------------------------
 %% Signature
@@ -199,9 +191,9 @@
 %% Comment the next command if BibTeX file not used, 
 %% Assumes that bibliography is in 'myrefs.bib'
 %% plainnat-pt.bst is used by default
+%\PrintBib{Bibliography/myrefs}
 \bibliographystyle{ieeetr}
 \bibliography{Bibliography/myrefs}
-%\PrintBib{Bibliography/myrefs}
 
 %% Index
 %% Uncomment next command if index is required, 
