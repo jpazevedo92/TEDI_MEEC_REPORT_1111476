@@ -1,6 +1,6 @@
 \chapter{Estado da Arte} \label{chap:sota}
 
-\section{Arquiteturas de Redes UAV}
+\section{Arquiteturas de Redes UAV}\label{sec:architectures}
 
 Dependendo do contexto em que estão inseridos, os UAVs podem estar dispostos de diversas formas e podem também ser controlados de diferentes formas. Ao longo desta secção serão analisadas diferentes arquiteturas de redes UAV o modo como funcionam e como interagem os UAVs entre si e em rede.
 
@@ -90,23 +90,140 @@ No artigo \cite{Secinti2018} é proposto um protocolo de gestão de uma rede aé
 
 
 
-\section{Áreas de aplicação das redes UAV}
+\section{Áreas de aplicação das redes UAV}\label{sec:application}
+
+Tal como dito em cima na secção \ref{sec:context}, os UAV e as suas redes tem várias utilidades tais como: escoltas militares, troca de mercadorias em algumas cidades, gestão do trânsito, fotografia aérea, segurança urbana. No entanto existem outros serviços e aplicações que estas podem operar.
 
 \subsection{Retransmissão de Comunicação}
+
+Os UAVs podem funcionar como nós de retransmissão, que conectam \textit{clusters} desconectados da rede \textit{ad hoc} móvel (MANET).  Nesse caso, os nós pertencentes a diferentes \textit{clusters} podem comunicar entre si utilizando um UAV, que pode ser colocado numa posição estratégica entre os dois. Por essa questão, um ou mais UAVs podem fornecer essa função em grandes MANETs, proporcionando eficiência de comunicação e flexibilidade. Adotando essa estratégia, pode se estender uma MANET numa área geográfica muito grande, onde os nós podem ter que ser agrupados em diferentes regiões devido aos requisitos de topologia de terrenos, localização de nós e mobilidade impostos pelo aplicação \cite{ImadJawhar2017}.
+
 \subsection{Gateways de Rede}
+
+Em áreas geográficas remotas ou áreas atingidas por desastres, um ou mais UAVs podem fornecer conectividade a redes de \textit{backbone}, infraestrutura de comunicação ou acesso à Internet agindo como nós de \textit{gateway}. Essa função pode desempenhar um papel essencial para restaurar a cobertura de telefone, Internet ou satélite desesperadamente necessária nesses locais. Essa conectividade pode apoiar esforços de busca e salvamento de vidas e reconstrução. Os UAVs podem ser implantados de maneira rápida e eficiente para executar essa tarefa de maneira muito dinâmica e económica \cite{ImadJawhar2017}.
+
 \subsection{UAV-assisted Sensing}
+
+As várias aplicações UAV requerem vários UAVs de colaboração para efetuar a deteção de uma área ou inspecionar uma infraestrutura utilizando um ou vários tipos de sensores como câmaras fotográficas, sensores de calores, leitores de radiação e monitores de gás. Essas aplicações exigem uma eficiência grande de comunicação de modo a permitir uma melhor deteção entre os vários UAVs. Alguns dos UAVs podem individualmente lidar com algumas das tarefas de deteção, uma solução eficiente para este problema passa por usar vários UAVs juntos na organização das operações e fazer uma colheita coletiva de informações mais precisas e confiáveis \cite{ImadJawhar2017}
+
 \subsection{UAV-assisted Acting}
+
+Em alguns casos, como fins agrícolas e militares, exigem dispositivos atuadores, como os UAVs. Nesse tipo de aplicações, vários UAVs podem colaborar entre si para realizar as tarefas necessárias. No caso da agricultura, vários UAVs poderiam trabalhar juntos para realizar a pulverização de grandes campos com pesticidas ou fazer distribuição rápida de sementes em grandes áreas \cite{ImadJawhar2017}.
+
 \subsection{UAV-based data storage}
+
+Apesar de algumas aplicações de UAVs enviem os dados recolhidos diretamente para a estação base, outros podem necessitar que os UAVs armazenem os a recolha de dados devido a três grandes motivos. A primeira é que os dados recolhidos necessitam de grande largura de banda de comunicação e os dados podem não estar sempre disponíveis para a transferência dos dados dos UAVs para a estação base. A segunda razão é que não existe a necessidade de enviar os dados recolhidos imediatamente para a estação logo após a recolha, pois a informação será usada e processada após a recolha. A terceira razão é que os dados recolhidos precisam de ser transferidos para a estação base somente após os dados serem processados e agregados instantaneamente durante a operação. Os UAVs podem ser homogéneos ou heterogéneos em termos de capacidade de armazenamento e capacidade de recolha de dados. Os UAVs podem recolher quantidades iguais ou diferentes de dados, dependendo claro do tipo de aplicação \cite{ImadJawhar2017}.
+
 \subsection{UAV-based data processing}
 
+Os UAVs podem ser equipados com unidades de processamento de última geração que podem ser utilizados por UAVs colaborativos para aplicações que precisam de processamento de alto desempenho, como processamento de imagem de alta resolução, processamento de vídeo, reconhecimento de padrões, fluxo de dados e planeamento de tarefas online. Uma tarefa de processamento de dados de alto desempenho pode ser obtida utilizando uma unidade computorizado num UAV ou várias unidades computorizadas disponíveis em vários UAVs. Neste último caso, precisa de ser efetivamente utilizada a abordagem de processamento distribuído pelos processadores disponíveis. Isso é geralmente muito importante se os UAVs estiverem a operar em zonas distantes das estações base e quando os resultados forem necessários no momento para acionar uma opção adequada. Por exemplo, num campo de batalha, um UAV pode precisar de identificar uma unidade inimiga que esteja próxima de algumas das suas unidades. Nesse caso o processamento de imagens e o reconhecimento de padrões são necessários para localizar o inimigo e tentar destruí-lo \cite{ImadJawhar2017}.
 
-\section{Software de Controlo Open-Source}
+\section{Software de Controlo Open-Source}\label{chap:cs_opensource}
+
+Nesta secção será analisada informação relativa tanto a software e protocolos open source existentes no mercado e que poderão a vir a ser utilizados na solução implementada.
 
 \subsection{Papparazzi UAV}
+
+O projeto Paparazzi UAV, fundado em 2003, é um projeto open source de hardware e software que abrange tanto a parte de software da estação terrena como os sistemas de pilotagem autónoma para os vários tipos de drones. Este projeto tem como principal foco o voo autónomo e o voo manual como um objetivo secundário \cite{TheFr2003}
+
+\subsubsection{Arquitecturas Implementadas}
+
+A nível das arquiteturas abordadas na secção acima este software é capaz de suportar todas as arquiteturas demonstradas acima com exceção das redes SD-UAV uma vez que ainda se encontra em fase de estudos. Estas implementações podem ser comprovadas pelos no artigos \cite{Remes2013,Bouachir2014a}.
+
+\pagebreak
+\subsubsection{Áreas de Aplicação}
+Este software integra varias áreas de aplicação no entanto, as que mais se destacam nesta tecnologia são as seguintes:
+
+\begin{itemize}
+    \item Rede de Sensores;
+    \item Investigação científica;
+    \item Processamento de dados;
+\end{itemize}
+
+\subsubsection{Funcionalidades Protocolares de Comunicação e de Controlo}
+
+A nível de funcionalidades protocolares de comunicações e controlo o Paparazzi UAV trabalha com alguns dos mais recentes protocolos de comunicação como o \textit{ZigBee(Xbee)}, /textit{Wi-Fi} e \textit{Bluetooth}\cite{TheFr2003}.
+
 \subsection{ArduPilot}
+O \textit{ArduPilot} é uma tecnologia que visa permitir a criação e o uso de sistemas de veículos não tripulados confiáveis e autónomos para o benefício pacífico de todos. É um projeto que atualmente pode ser descrito como uma \textit{suite} para um piloto automático \cite{ArduPilotCommunity}.
+
+\subsubsection{Arquitecturas Implementadas}
+
+As arquiteturas suportadas por esta tecnologia são as seguintes: controlo direto, enxames e também com mesh encontrando-se as áreas de ad-hoc e SD-UAV ainda em fase de desenvolvimento.
+
+\subsubsection{Áreas de Aplicação}
+
+Entre as áreas de aplicação desta tecnologia encontram-se:
+\begin{itemize}
+    \item {Mapeamento Aéreo;}
+    \item Procura e Salvamento VTOL;
+    \item Agricultura com os tratores automáticos;
+    \item Controlo de veículos submarinos.
+\end{itemize}
+
+\subsubsection{Funcionalidades Protocolares de Comunicação e de Controlo}
+
+A este nível de funcionalidades protocolares esta tecnologia é um pouco mais completa que a tecnologia apresentada anteriormente já que suporta não só o protocolo \textit{Wi-Fi} mas também suporta as tecnologias:
+\begin{itemize}
+    \item \textit{MAVLink} - é um protocolo de mensagens \textit{lightweight} para comunicação com drones (e entre componentes \textit{onboard} do drone). Segue um padrão de \textit{design} moderno híbrido de \textit{publish-subscriber} e ponto-a-ponto \cite{DronecodeProject}.
+    \item CAN - \textit{Controller Area Network}
+    \item UAVCAN - é um protocolo leve projetado para comunicação confiável em aplicações aeroespaciais e robóticas pelo barramento CAN \cite{UAVCANdevelopmentteam}.
+\end{itemize}
+
 \subsection{Dronecode}
+
+A tecnologia Dronecode apresentação como uma solução \textit{full-stack} para os \textit{drones}, com soluções que vão desde a estação de controlo, GCS, até ao próprio \textit{drone} e aos seus sensores. Esta tecnologia criada sob a alçada da Fundação \textit{Linux} e que tem como objetivo promover o desenvolvimento dos drones contando com parceiros tais como a \textit{Qualcomm} e a \textit{Intel} \cite{DronecodeProject}.
+
+\subsubsection{Arquitecturas Implementadas}
+
+A nível de arquiteturas esta tecnologia é também uma das mais completas, tendo em conta os objectivos do projeto \textit{Dronecode} que é como diz em cima ser um dos parceiros para o desenvolvimento dos \textit{drones}. Por isso, esta tecnologia está apta a trabalhar com todas as arquiteturas referidas na secção \ref{sec:architectures}. 
+
+\subsubsection{Áreas de Aplicação}
+
+Nesta tecnologia as áreas de aplicação abrangidas são vastas, entre as quais destacam-se as seguintes:
+
+\begin{itemize}
+    \item Carga e Entrega - de pequenos pacotes como medicamentos;
+    \item Inspeções aéreas - como por exemplo, mapeamento geográfico, inspeções em canteiros de obras e gasodutos, gestão da vida selvagem, gestão de fazendas etc;
+    \item Entretenimento - competições e afins;
+    \item Fotografia aérea;
+    \item Busca, Salvamento e fiscalização - fiscalização de fronteiras;
+    \item Exploração e Investigação - para fins académicos e científicos \cite{DronecodeProject}.
+\end{itemize}
+
+\subsubsection{Funcionalidades Protocolares de Comunicação e de Controlo}
+
+A nível de funcionalidades protocolares de comunicação esta tecnologia utiliza também algumas das que já foram abordadas noutas tecnologias descritas em cima. Entre essas tecnologias estão o \textit{Wi-Fi}, o \textit{MAVLink} e o UAVCAN. Para além destas duas há ainda a destacar o RTPS, neste caso FastRTPS \cite{DronecodeProject}. O protocolo de comunicação RTPS que é uma \textit{framework publish subscrive} de alta performance que partilha a informação nos sistemas distribuidos utilizando um modelo desacoplado que se baseia em \textit{Publishers}, subscritores e \textit{Data Topics}\cite{EProsima}.
+
 \subsection{LibrePilot}
+
+O projecto \textit{open source} LibrePilot foi fundado em 2015. Este projecto foca-se na investigação e desenvolvimento de \textit{hardware} e \textit{software} para serem utilizados numa variedade de aplicações incluindo controlo de veículos e estabilização, UAVs e \textit{robots}. Um dos principais objectivos do projecto é conseguir arranjar um ambiente aberto e colaborativo e fazer dele a casa ideal para o desenvolvimento de ideias inovadoras \cite{LibrePilot}.
+
+\subsubsection{Arquitecturas Implementadas}
+
+
+
+\subsubsection{Áreas de Aplicação}
+
+\subsubsection{Funcionalidades Protocolares de Comunicação e de Controlo}
+
 \subsection{Comparação de soluções}
+
+Nesta secção será disponibilizada uma tabela comparativa de todas as soluções apresentas nas sub-secções em cima.
+
+
+\begin{table}[H]
+\caption{Comparação das várias opções de \textit{software}}
+\begin{tabular}{l|c|c|c|}
+\cline{2-4}
+& \multicolumn{1}{l|}{Arquiteturas}  & \multicolumn{1}{l|}{Protocolos}  & \multicolumn{1}{l|}{Documentação} \\ \hline
+\multicolumn{1}{|l|}{PapparazziUAV} & \textit{CD, SW, Mesh e Ad-Hoc}  & \textit{Xbee, Wi-Fi e Bluetooth} & Razoável \\ \hline
+\multicolumn{1}{|l|}{ArduPilot}     & \textit{CD, SW, Mesh, Ad-Hoc e SD-UAV} & \textit{MAVLink, WiFi, CAN e UAVCAN}      & Boa                               \\ \hline
+\multicolumn{1}{|l|}{Dronecode}     & Todas                                  & \textit{MAVLink, WiFi, UAVCAN e FastRTPS} & Muito Boa                         \\ \hline
+\multicolumn{1}{|l|}{LibrePilot}    & \textit{CD e SW}                       & \textit{MAVLink e MSP}                    & Razoável                          \\ \hline
+\end{tabular}
+\end{table}
+
 
 
 
