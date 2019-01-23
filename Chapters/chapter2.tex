@@ -201,17 +201,22 @@ O projecto \textit{open source} LibrePilot foi fundado em 2015. Este projecto fo
 
 \subsubsection{Arquitecturas Implementadas}
 
-
+Segundo a documentação desta tecnologia esta está mais virada para a arquitetura de controlo directo, focando-se muito na interação com \textit{smartphones} como estações de controlo através de uma \textit{app Android} que já se encontra disponível \textit{online}\cite{LibrePilot}.
 
 \subsubsection{Áreas de Aplicação}
 
+Esta tecnologia não é muito basta em termos de áreas de aplicação uma vez que na sua documentação e em foruns utilizados pela comunidade de developers apenas é referida a sua utilização para fotografia aérea \cite{LibrePilot}.
+
 \subsubsection{Funcionalidades Protocolares de Comunicação e de Controlo}
+
+Nas funcionalidades de comunicação e controlo para esta tecnologia encontra-se o protocolo \textit{MAVLink} já referida nesta secção e para além disso suporta também o protocolo MSP, que é um protocolo de comunicação desenvolvido pela \textit{MultiWii} desenhado para ser leve, genérico, eficiente e seguro \cite{MultiWii,MultiWiiForum}. 
 
 \subsection{Comparação de soluções}
 
 Nesta secção será disponibilizada uma tabela comparativa de todas as soluções apresentas nas sub-secções em cima.
 
 
+%%%%%%%TABELA 1%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[H]
 \caption{Comparação das várias opções de \textit{software}}
 \begin{tabular}{l|c|c|c|}
@@ -220,10 +225,10 @@ Nesta secção será disponibilizada uma tabela comparativa de todas as soluçõ
 \multicolumn{1}{|l|}{PapparazziUAV} & \textit{CD, SW, Mesh e Ad-Hoc}  & \textit{Xbee, Wi-Fi e Bluetooth} & Razoável \\ \hline
 \multicolumn{1}{|l|}{ArduPilot}     & \textit{CD, SW, Mesh, Ad-Hoc e SD-UAV} & \textit{MAVLink, WiFi, CAN e UAVCAN}      & Boa                               \\ \hline
 \multicolumn{1}{|l|}{Dronecode}     & Todas                                  & \textit{MAVLink, WiFi, UAVCAN e FastRTPS} & Muito Boa                         \\ \hline
-\multicolumn{1}{|l|}{LibrePilot}    & \textit{CD e SW}                       & \textit{MAVLink e MSP}                    & Razoável                          \\ \hline
+\multicolumn{1}{|l|}{LibrePilot}    & CD                       & \textit{MAVLink e MSP}                    & Razoável                          \\ \hline
 \end{tabular}
 \end{table}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
