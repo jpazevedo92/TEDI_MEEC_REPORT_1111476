@@ -2,11 +2,11 @@
 
 \section{Contexto} \label{sec:context}
 
-Os \textit{drones}, ou veículos aéreos não tripulados, vêm cada vez mais a ser uma realidade nos dias que correm. A sua área de atividade é bastante extensa e tem vindo a emergir em diversos níveis, tanto a nível civil como a nível militar, incluindo escoltas militares, troca de mercadorias em algumas cidades, gestão do trânsito, fotografia aérea, segurança urbana e por aí adiante \cite{8255738}. Devido aos obstáculos naturais que podem existir nos diferentes cenários descritos em cima ou então por interferências intencionais, a comunicação entre os UAVs é suscetível a interrupções \cite{Secinti2018} e nesse sentido, é necessário encontrar medidas para tornar a comunicação mais eficiente.
+Os \textit{drones}, ou veículos aéreos não tripulados são cada vez mais a ser uma realidade nos dias que correm. A sua área de atividade é bastante extensa e tem vindo a emergir em diversos níveis, tanto a nível civil como a nível militar, incluindo escoltas militares, troca de mercadorias em algumas cidades, gestão do trânsito, fotografia aérea, segurança urbana e por aí adiante \cite{8255738}. Devido aos obstáculos naturais que podem existir nos diferentes cenários descritos em cima ou então, por interferências intencionais a comunicação entre os UAVs é suscetível a interrupções \cite{Secinti2018} e nesse sentido, é necessário encontrar medidas para tornar a comunicação mais eficiente.
 
 Com o advento das tecnologias robustas das redes \textit{wireless}, os UAVs equipados com \textit{transceivers} podem ser habilitados para comunicar com os nós terrestres assim como os outros UAVs \cite{Morgenthaler2012a}. Deste modo é possível um comando qualquer da estação possa chegar a unidades cada vez mais remotas.
 
-Com o progresso dos sistemas embebidos e a tendência para a minimalização dos sistemas micro-eletrónicos é possível adquirir pequenos ou mini UAVs a um preço reduzido. Contudo a capacidade de um mini UAV é limitada. A colaboração e a coordenação de múltiplos UAVs pode criar um sistema muito mais capaz do que apenas um UAV. As vantagens dos dos sistemas multi-UAV são as seguintes:
+Com o progresso dos sistemas embebidos e a tendência para a minimalização dos sistemas micro-eletrónicos é possível adquirir pequenos ou mini-UAVs a um preço reduzido. Contudo a capacidade de um mini-UAV é limitada. A colaboração e a coordenação de múltiplos UAVs pode criar um sistema muito mais capaz do que apenas um UAV. As vantagens dos dos sistemas multi-UAV são as seguintes:
   \begin{itemize}
     \item{Custo: O custo de aquisição e manutenção de um mini UAV é mais pequeno quando comparado aos UAVs normais;}
     \item {Escalabilidade: A utilização de um UAV normal permite apenas uma quantidade limitada de aumento de cobertura. Contudo, os sistemas multi-UAV podem assegurar a escalabilidade da operação facilmente; }
@@ -17,16 +17,16 @@ Com o progresso dos sistemas embebidos e a tendência para a minimalização dos
   
   Ao longo desta tese irá ser abordado o tema de como estender a ligação de controlo entre a estação terrena e um UAV remoto, utilizando um sistema multi-UAV em enxame.
   
-  \section{Objetivos}\label{sec:goals}
+\section{Objetivos}\label{sec:goals}
 
-Um dos principais objetivos deste trabalho de investigação é especificar, desenvolver e testar um protocolo de sobreposição com base em /textit{software open source} de modo a encaminhar instruções para comandar um UAV remoto com base num encaminhamento \textit{multi-hop}. Deverá ainda ser possível configurar a rede de forma a que esta privilegie as comunicações em linha de vista e sem fio de modo a permitir que o comando chegue sempre ao seu destino. É possível a todo a instante a inserção de novos UAVs no sistema de forma a melhorar a comunicação existente e caso a adição dos mesmos seja recomendável.
+Um dos principais objetivos deste trabalho de investigação é especificar, desenvolver e testar um protocolo de sobreposição com base em \textit{software open source} de modo a encaminhar instruções para comandar um UAV remoto com base num encaminhamento \textit{multi-hop}. Deverá ainda ser possível configurar a rede de forma a que esta privilegie as comunicações em linha de vista e sem fio, de modo a permitir que o comando chegue sempre ao seu destino. É possível  a inserção de novos UAVs no sistema, em qualquer ocasião, de forma a melhorar a comunicação existente e caso a mesma seja recomendável.
 
 \section{Estrutura da Dissertação}\label{sec:struct}
 
 Para além da introdução, esta dissertação contém mais quatro capítulos.
 No Capítulo~\ref{chap:sota}, é descrito o estado da arte e são
-apresentados trabalhos relacionados. O foco principal irá incidir sobre tudo em protocolos \textit{open source} a fim de encaminhar instruções do controlador para comandar uma unidade UAV remota.
-No Capítulo~\ref{chap:chap3}, será analisado todo o \textit{hardware} e \textit{software} assim como todas as diferentes soluções utilizadas no desenvolvimento da solução proposta.
-No Capítulo~\ref{chap:chap4} será apresentada uma análise dos resultados conseguidos com a solução testada em ambiente simulado/real. 
-No Capítulo~\ref{chap:concl} será analisado todo o trabalho realizado e apresentadas as conclusões e serão também discutidas as melhorias que podem vir a ser desenvolvidas no futuro.
+apresentados trabalhos relacionados. O foco principal irá incidir sobretudo em protoco los \textit{open source} exitentes com a finalidade encaminhar comandos de uma base para uma unidade UAV remota.
+No Capítulo~\ref{chap:chap3}, será analisado todo o \textit{hardware} e \textit{software}, assim como todas as diferentes soluções utilizadas no desenvolvimento da solução proposta.
+No Capítulo~\ref{chap:chap4} será apresentada uma análise dos resultados conseguidosr recorrrendo ao teste da solução em ambiente simulado/real. 
+No Capítulo~\ref{chap:concl} será analisado todo o trabalho realizado e apresentadas as conclusões e serão também discutidas as melhorias que poderão ser desenvolvidas e melhoradas no futuro.
 
