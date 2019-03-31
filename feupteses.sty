@@ -192,7 +192,7 @@ with the `report' document style}{}}{}
 \clubpenalty=6000
 \widowpenalty=6000
 
-\RequirePackage{mathptmx}	   % font times
+%\RequirePackage{mathptmx}	   % font times
 \RequirePackage[scaled]{couriers}  % font courier
 \RequirePackage[scaled]{helvet}    % font helvetica
 \RequirePackage[pdftex]{graphicx,graphics}
@@ -214,7 +214,7 @@ with the `report' document style}{}}{}
      \newcommand{\citet}{\cite}
      \newcommand{\citep}{\cite}
   \else
-     %\RequirePackage[round]{natbib}
+     \RequirePackage[round]{natbib}
   \fi
 \fi
 
@@ -641,10 +641,11 @@ with the `report' document style}{}}{}
     \pagestyle{empty}
     \pdfbookmark[0]{P\'{a}gina de Rosto}{init}}
 
+%português
   \newcommand{\PrintBib}[1]{%
     \renewcommand{\bibname}{Refer\^{e}ncias}%
     \if@numericrefs%
-      \bibliographystyle{Bibliography/plain-pt}%
+      \bibliographystyle{Bibliography/IEEEtran}%
     \else%
       \if@alpharefs%
         \bibliographystyle{Bibliography/alpha-pt}%
@@ -652,7 +653,7 @@ with the `report' document style}{}}{}
         \bibliographystyle{Bibliography/plainnat-pt}%
       \fi%
     \fi%
-    \clearemptydoublepage%
+    \cleardoublepage%
     \phantomsection%
     \addcontentsline{toc}{chapter}{Refer\^{e}ncias}%
     \begin{singlespace}\bibliography{#1}\end{singlespace}}

@@ -1,9 +1,9 @@
-\chapter*{Acrónimos}
-\chaptermark{Acrónimos}
+\chapter*{Lista de Acrónimos}
+\chaptermark{Lista de Acrónimos}
 \input{Preamble/acronyms}
 \DTLsort{Acronym}{acronyms}
 
-\begin{longtable}{m{2.2cm}m{12.2cm}}
+\begin{longtable}{m{2.5cm}m{11.8cm}}
 \DTLforeach*{acronyms}{\thisAcronym=Acronym,\thisDesc=Description}{
-\hspace{-0.4cm}\textbf{\thisAcronym} & \thisDesc\\[5pt]}
+\textbf{\thisAcronym} & \thisDesc\\[5pt]}
 \end{longtable}
