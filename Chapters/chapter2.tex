@@ -13,7 +13,7 @@ Neste tipo de arquitetura, cada UAV é controlado diretamente pela sua estação
 \caption{A arquitectura de controlo directo \label{fig:controlo_directo}}
 \end{figure}
 
-As GCSs podem ser implementadas de diferentes formas: podem ser implementadas através de uma antena Wi-Fi, que distribui o sinal de comando para os UAVs, ou então, numa versão mais simples através de telecomando sendo que esta é opção a mais utilizada em captação de imagem e vídeo.
+As GCSs (\textit{Ground Control Stations}) podem ser implementadas de diferentes formas: podem ser implementadas através de uma antena Wi-Fi, que distribui o sinal de comando para os UAVs, ou então, numa versão mais simples através de telecomando sendo que esta é opção a mais utilizada em captação de imagem e vídeo.
 
 No entanto, como esta arquitectura é baseada num modelo de controlo mais centralizado possui algumas desvantagens tais como: 
 
@@ -63,11 +63,11 @@ A tecnologia \textit{ad-hoc} permite a criação de redes de dispositivos móvei
 
 Como as redes \textit{ad-hoc} funcionam sem nenhuma infraestrutura é necessário que existam mecanismos de descoberta de rotas e encaminhamento de informação. Para isso, estas redes recorrem a protocolos de rotas de dois tipos: os reativos e os pró-ativos.
 
-Dentro dos protocolos reativos, que são protocolos que não tomam iniciativa de manter as rotas e apenas as determinam, quando necessário, fazendo \textit{flooding} de pedidos na rede. Este protocolo tem como vantagem o facto de usar recursos apenas quando é necessário, no entanto, inundam a rede com pedidos e introduzem atraso no inicio de envio do tráfego pois tem de ser primeiramente determinada a rota. Neste tipo de protocolos inclui-se o AODV definido pela norma RFC 3561, onde um determinado nó A envia um \textit{Route Request} para poder efetuar a comunicação com o nó B e recebe deste um \textit{Route Reply} de forma a indicar a rota mais próxima.
+Dentro dos protocolos reativos, que são protocolos que não tomam iniciativa de manter as rotas e apenas as determinam, quando necessário, fazendo \textit{flooding} de pedidos na rede. Este protocolo tem como vantagem o facto de usar recursos apenas quando é necessário, no entanto, inundam a rede com pedidos e introduzem atraso no inicio de envio do tráfego pois tem de ser primeiramente determinada a rota. Neste tipo de protocolos inclui-se o AODV(\textit{Ad hoc On-Demand Distance Vector}) definido pela norma RFC 3561 (\textit{Request for Comments}), onde um determinado nó A envia um \textit{Route Request} para poder efetuar a comunicação com o nó B e recebe deste um \textit{Route Reply} de forma a indicar a rota mais próxima.
 
-No caso dos protocolos pró-ativos, as rotas são construídas utilizando tráfego de controlo contínuo e mantidas todas as rotas. Este processo tem como vantagem ter as rotas sempre disponíveis e mantém o tráfego de controlo constante. Um exemplo deste tipo de protocolo é o OLSR definido pela norma RFC 3626. Este protocolo implementa um sistema de deteção de ligação a nós vizinhos, através de mensagens \textit{HELLO} que efetuam os pedidos de encaminhamento de forma otimizada através do mecanismo de MPR. Para além destes dois aspetos este protocolo envia mensagens de estado das ligações e cálculo de rotas \cite{Ricardoa}.
+No caso dos protocolos pró-ativos, as rotas são construídas utilizando tráfego de controlo contínuo e mantidas todas as rotas. Este processo tem como vantagem ter as rotas sempre disponíveis e mantém o tráfego de controlo constante. Um exemplo deste tipo de protocolo é o OLSR (\textit{Optimized Link-State Routing}) definido pela norma RFC 3626. Este protocolo implementa um sistema de deteção de ligação a nós vizinhos, através de mensagens \textit{HELLO} que efetuam os pedidos de encaminhamento de forma otimizada através do mecanismo de MPR (\textit{MultiPoint Relaying}). Para além destes dois aspetos este protocolo envia mensagens de estado das ligações e cálculo de rotas \cite{Ricardoa}.
 
-Em relação aos drones existem estudos sobre as FANETs, que são redes \textit{ad-hoc} constituídas por UAVs, como se pode comprovar através do artigo \cite{Bekmezci2013a}. Um dos exemplos de rede ad-hoc com equipamentos UAV é o que está referenciado no artigo \cite{Brown2004} que fala de dois cenários de funcionamento, no primeiro o UAV atua como um nó de rádio proeminente que efetua a conexão de dos pontos de rádio terrestres desativados. No segundo cenário, a rede permite que os grupos de UAVs comuniquem entre si para estender o alcance operacional dos UAVs mais pequenos.
+Em relação aos drones existem estudos sobre as FANETs (\textit{Flying Ad-Hoc Networks}, que são redes \textit{ad-hoc} constituídas por UAVs, como se pode comprovar através do artigo \cite{Bekmezci2013a}. Um dos exemplos de rede ad-hoc com equipamentos UAV é o que está referenciado no artigo \cite{Brown2004} que fala de dois cenários de funcionamento, no primeiro o UAV atua como um nó de rádio proeminente que efetua a conexão de dos pontos de rádio terrestres desativados. No segundo cenário, a rede permite que os grupos de UAVs comuniquem entre si para estender o alcance operacional dos UAVs mais pequenos.
 
 \begin{figure}[H]
 \centering
@@ -118,7 +118,7 @@ Apesar de algumas aplicações de UAVs enviarem os dados recolhidos diretamente 
 
 Os UAVs podem ser equipados com unidades de processamento de última geração que podem ser utilizados por UAVs colaborativos para aplicações que precisam de processamento de alto desempenho, como processamento de imagem de alta resolução, processamento de vídeo, reconhecimento de padrões, fluxo de dados e planeamento de tarefas online. Uma tarefa de processamento de dados de alto desempenho pode ser obtida utilizando uma unidade computorizado num UAV ou várias unidades computorizadas disponíveis em vários UAVs. Neste último caso, precisa de ser efetivamente utilizada a abordagem de processamento distribuído pelos processadores disponíveis. Isto é geralmente muito importante se os UAVs estiverem a operar em zonas distantes das estações base e quando os resultados forem necessários no momento para acionar uma opção adequada. Por exemplo, num campo de batalha, um UAV pode precisar de identificar uma unidade inimiga que esteja próxima de algumas das suas unidades. Nesse caso o processamento de imagens e o reconhecimento de padrões são necessários para localizar o inimigo e tentar destruí-lo \cite{ImadJawhar2017}.
 
-\section{Software de Controlo Open-Source}\label{chap:cs_opensource}
+\section{Software de Controlo \textit{Open-Source}}\label{chap:cs_opensource}
 
 Nesta secção será analisada informação relativa tanto a \textit{software} e protocolos \textit{open source} existentes no mercado e que poderão a vir a ser utilizados na solução implementada.
 
@@ -156,7 +156,7 @@ As arquiteturas suportadas por esta tecnologia são as seguintes: controlo diret
 Entre as áreas de aplicação desta tecnologia encontram-se:
 \begin{itemize}
     \item {Mapeamento Aéreo;}
-    \item Procura e Salvamento VTOL;
+    \item Procura e Salvamento VTOL (\textit{Vertical take-off and landing});
     \item Agricultura com os tratores automáticos;
     \item Controlo de veículos submarinos.
 \end{itemize}
