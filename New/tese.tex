@@ -18,7 +18,7 @@
 %%
 %% * To add new Figures you just need to put them inside the 'Figures' folder and when you want to "call" it you just need to use the figure name. You do not need to put the path 'Figures/puzzle', only the figure name!
 %%
-%%% * For other questions about the template adaptation to be used in ISEP please send an email to 1140570@isep.ipp.pt :)
+%%% * For other questions about the template adaptation to be used in ISEP please send an email to 1140570@isep.ipp.pt or 1140348@isep.ipp.pt :)
 
 
 %%========================================
@@ -34,7 +34,7 @@
 %% Important Packages
 %%----------------------------------------
 \documentclass[11pt,a4paper,twoside,openright]{report}
-\usepackage[portugues]{feupteses}
+\usepackage[portugues,numericrefs]{feupteses}
 %% Options: 
 %% - portugues: titles, etc in portuguese
 %% - onpaper: links are not shown (for paper versions)
@@ -53,42 +53,41 @@
 \usepackage{datatool}
 \usepackage{acronym}
 \usepackage{longtable,multirow,booktabs}
+\usepackage{lipsum} %dummy text
+\usepackage{url}
+\usepackage{caption,subcaption}
+\def\UrlBreaks{\do\/\do-} 
+\def\UrlBreaks{\do\_\do-} %de forma a ser possível a justificação e 'breaks' dos URLs na Bibliografia
 
-\usepackage{chngcntr}
-\counterwithout{figure}{section}
-\counterwithout{figure}{subsection}
-\counterwithout{table}{section}
-\counterwithout{table}{subsection}
 %%----------------------------------------
 %% Information about the work
 %%----------------------------------------
-\title{UAV Command Forwarder}
-\author{João Pedro Mesquita Azevedo}
+\title{Título da Dissertação}
+\author{Nome do Autor}
 \school{Instituto Superior de Engenharia do Porto}
 \department{Departamento de Engenharia Eletrotécnica}
 \degree{Mestrado em Engenharia Eletrotécnica e de Computadores}
 \area{Área de Especialização em Telecomunicações}
-\requirements{Este relatório satisfaz, parcialmente, os requisitos que constam da Ficha de Unidade Curricular de Tese/Dissertação, do 2.º ano do Mestrado em Engenharia Eletrotécnica e de Computadores.}
+\requirements{Este relatório satisfaz, parcialmente, os requisitos que constam da Ficha de Unidade Curricular de Tese/Dissertação, do 2.º ano, do Mestrado em Engenharia Eletrotécnica e de Computadores.}
 
 %%----------------------------------------
 %% Dates (appear in title pages)
 %%----------------------------------------
-%\thesisdate{Porto, DAY de MONTH de YEAR}
-\thesisdate{Porto, março de 2019}
-\thesisyear{2019}
+\thesisdate{DAY de MONTH de YEAR}
+\thesisyear{YEAR}
 
 %%----------------------------------------
 %% Copyright text
 %%----------------------------------------
-\copyrightnotice{João Azevedo, 2019} % Comment if not used % Comment if not used
+\copyrightnotice{Primeiro e último nome, YEAR} % Comment if not used
 
 %%----------------------------------------
 %% Keywords (appear in abstract)
 %%----------------------------------------
 % English Keywords
-\keywords{Uav, Drones, Networks, Control, Extend, Mesh, Multi-Hop, Routing}
+\keywords{MIMO, OFDM, MIMO-OFDM, Wireless Communication System, Communication Channel}
 % Portuguese Keywords
-\keywordsPT{UAV, Drones, Redes, Controlo, Alcance, Mesh, Multi-hop, Encaminhamento} 
+\keywordsPT{MIMO, OFDM, MIMO-OFDM, Sistema de comunicação sem fios, Canal de Comunicação} 
 
 %%----------------------------------------
 %% Macros
@@ -120,13 +119,13 @@
 %%----------------------------------------
 %% Candidate and supervisors info
 %%----------------------------------------
-\candidate{Candidato}{João Pedro Mesquita Azevedo, \href{mailto:1111476@isep.ipp.pt}{1111476@isep.ipp.pt}}
+\candidate{Candidato}{Nome do Candidato, \href{mailto:11111@isep.ipp.pt}{11111@isep.ipp.pt}}
 
-\supervisor{Orientação científica}{Jorge Botelho Da Costa Mamede, \href{mailto:jbm@isep.ipp.pt}{jbm@isep.ipp.pt}}
+\supervisor{Orientação científica}{Nome do Orientador ISEP, \href{mailto:XXX@isep.ipp.pt}{XXX@isep.ipp.pt}}
 
-%\company{Empresa}{Nome da Empresa}
+\company{Empresa}{Nome da Empresa}
 
-%\companysupervisor{Supervisão}{Nome do Supervisor Empresa, \href{mailto:YYY@empresa.com}{YYY@empresa.com}}
+\companysupervisor{Supervisão}{Nome do Supervisor Empresa, \href{mailto:YYY@empresa.com}{YYY@empresa.com}}
 
 %%----------------------------------------
 %% Signature
@@ -144,7 +143,7 @@
 %% Preparation of Dissertation (if)
 %%----------------------------------------
 % Uncomment for additional text below the author's name (title page)
-%\additionalfronttext{Preparação da Dissertação} 
+\additionalfronttext{Preparação da Dissertação} 
 
 %%----------------------------------------
 %% Preliminary materials
@@ -186,8 +185,8 @@
 %%----------------------------------------
 %% Comment next 2 commands if numbered appendices are not used
 \appendix
-%\include{Appendices/appendix1}
-%\include{Appendices/appendix2}
+\include{Appendices/appendix1}
+\include{Appendices/appendix2}
 
 %%----------------------------------------
 %% Final materials
@@ -198,7 +197,6 @@
 %% Assumes that bibliography is in 'myrefs.bib'
 %% plainnat-pt.bst is used by default
 \PrintBib{Bibliography/myrefs}
-
 
 %% Index
 %% Uncomment next command if index is required, 
